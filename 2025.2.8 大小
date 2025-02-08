@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+	int a=0;
+	int n = rand()%100+1;
+	int c = 0;
+	do
+	{
+		scanf_s("%d", &a);
+		c++;
+		if (a > n) {
+			printf("大了\n");
+		}
+		else if(a < n) {
+			printf("小了\n");
+		}
+	} while (a != n);
+	printf("猜中次数是%d", c);
+	return 0;
+
+}
