@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    
+    // 输入三条边
+    scanf("%d %d %d", &a, &b, &c);
+    
+    // 找到最大值（可能是斜边）
+    int max = a;
+    if (b > max) {
+        max = b;
+    }
+    if (c > max) {
+        max = c;
+    }
+    
+    // 判断是否满足勾股定理
+    if (max == a) {
+        if (a * a == b * b + c * c) {
+            printf("Y\n");
+        } else {
+            printf("N\n");
+        }
+    } else if (max == b) {
+        if (b * b == a * a + c * c) {
+            printf("Y\n");
+        } else {
+            printf("N\n");
+        }
+    } else {
+        if (c * c == a * a + b * b) {
+            printf("Y\n");
+        } else {
+            printf("N\n");
+        }
+    }
+    
+    return 0;
+}
